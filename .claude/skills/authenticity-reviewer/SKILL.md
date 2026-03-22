@@ -36,7 +36,7 @@ Before running, gather:
 ```bash
 # Fetch thread context from Reddit JSON API
 curl -s "https://www.reddit.com/r/<sub>/comments/<id>/<slug>.json" \
-  -H "User-Agent: HelloConvo/1.0 (research)" | \
+  -H "User-Agent: AuthReviewer/1.0 (research)" | \
   jq '[.[1].data.children[] | select(.kind == "t1") | {author: .data.author, score: .data.score, body: .data.body}] | .[0:8]'
 ```
 
